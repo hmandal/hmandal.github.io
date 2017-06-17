@@ -5,8 +5,6 @@ title: Create a Jekyll powered blog in minutes
 
 No other post could take this place :) It helped me setup this blog.
 
-For more details visit [Source Code of this Blog!](https://github.com/hmandal/hmandal.github.io)
-
 ## Quick Start
 
 ### Step 1) Fork Jekyll Now to your User Repository
@@ -38,3 +36,5 @@ Edit `/_posts/2014-3-3-Hello-World.md` to publish your first blog post. This [Ma
 ![First Post](/images/first-post.png "First Post")
 
 > You can add additional posts in the browser on GitHub.com too! Just hit the + icon in `/_posts/` to create new content. Just make sure to include the [front-matter](http://jekyllrb.com/docs/frontmatter/) block at the top of each new blog post and make sure the post's filename is in this format: year-month-day-title.md
+
+[Reference: https://github.com/hmandal/hmandal.github.io](https://github.com/hmandal/hmandal.github.io)
