@@ -2,6 +2,9 @@
 # This file contains configuration flags to customize your site
 #
 
+#fix for jekyll serve -w
+github: [metadata]
+
 # Name of your site (displayed in the header)
 name: HM's Blog
 
