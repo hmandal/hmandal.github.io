@@ -5,6 +5,24 @@
 #fix for jekyll serve -w
 github: [metadata]
 
+#defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "Himanshu Mandal"
+  -
+    scope:
+      path: ""
+      type: "pages" # previously `page` in Jekyll 2.2.
+    values:
+      author: "Himanshu Mandal"
+
+# Excerpt separator
+excerpt_separator: <!--more-->
+
 # Name of your site (displayed in the header)
 name: HM's Blog- What I learnt today :)
 
@@ -21,7 +39,7 @@ avatar: https://avatars2.githubusercontent.com/u/6329485?v=3&s=72
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: hmandal007@gmail.com
+  email: http://www.google.com/recaptcha/mailhide/d?k=01EZblRVcwCfeaWKpFaYwlsQ==&c=UB1oSWyou13mWo9S_j8G-jtShQF9_J2sKKP4oi0HfNE=
   facebook: himanshu.mandal.007
   flickr:
   github: hmandal
@@ -59,7 +77,7 @@ baseurl: ""
 permalink: /:title/
 
 # The release of Jekyll Now that you're using
-version: v1.2.0
+version: v3.4.3
 
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
