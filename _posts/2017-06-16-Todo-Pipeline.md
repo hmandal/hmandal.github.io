@@ -6,6 +6,7 @@ date: 2017-06-17
 published: true
 ---
 
+Expand to see content.
 <!--more-->
 
 ## Features:
@@ -23,3 +24,5 @@ published: true
 ## Content:
 
 - [ ] How I added the checkmark feature :P
+- [ ] [Typed Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays)
+- [ ] [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
