@@ -1,9 +1,14 @@
 ---
 layout: post
 title: Create a Jekyll powered blog in minutes
+tags: [jekyll, short reading, github-pages, tutorial, technical]
+date: 2017-06-17
+published: true
 ---
 
 No other post could take this place :) It helped me setup this blog.
+
+<!--more-->
 
 ## Quick Start
 
