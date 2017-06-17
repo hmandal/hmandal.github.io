@@ -10,6 +10,18 @@
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
+/* CUSTOM RULES */
+/**************/
+
+.box_done:before {
+  content: "\2611\ ";
+}
+
+.box:before {
+  content: "\2610\ ";
+}
+
+/**************/
 /* BASE RULES */
 /**************/
 
