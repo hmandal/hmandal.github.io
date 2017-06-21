@@ -26,5 +26,8 @@ Expand to see content.
 - [ ] How I added the checkmark feature :P
 - [ ] [Typed Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays)
 - [ ] [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [ ] [WebGl-Why we should learn](https://www.pluralsight.com/blog/software-development/webgl-basics)
+- [ ] WebGL
+  - [ ] [Why we should learn](https://www.pluralsight.com/blog/software-development/webgl-basics)
+  - [ ] [Getting Started](https://www.pluralsight.com/blog/software-development/get-started-with-webgl-and-three-js-by-using-this-helpful-list)
+  - [ ] [Q&A](https://www.pluralsight.com/blog/it-ops/webgl-and-three-js)
 - [ ] [RawGit- How to use](https://cdn.rawgit.com/alexmackey/threeJsBasicExamples/6f009a0a8d7aaed3ca64b9041dd050ac8d89b8a3/index.html)
