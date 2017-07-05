@@ -1,6 +1,7 @@
 ---
 layout: post
 title: (Draft)Backbone.JS > Applications > What is it? > How it works? > Current Support > Future goals
+excerpt: Backbone.js is basically an uber-light framework that allows you to structure your Javascript code in a **MVC** (Model, View, Controller) fashion.
 tags: [backbone.js, short reading, javascript, technical]
 date: 2017-07-03
 published: false
@@ -8,7 +9,7 @@ published: false
 
 ## Backbone.JS
 
-Backbone.js is basically an uber-light framework that allows you to structure your Javascript code in an **MVC** (Model, View, Controller) fashion.
+Backbone.js is basically an uber-light framework that allows you to structure your Javascript code in a **MVC** (Model, View, Controller) fashion.
 
 <!--more-->
 
