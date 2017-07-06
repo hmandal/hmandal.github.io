@@ -31,3 +31,4 @@ Expand to see content.
   - [ ] [Getting Started](https://www.pluralsight.com/blog/software-development/get-started-with-webgl-and-three-js-by-using-this-helpful-list)
   - [ ] [Q&A](https://www.pluralsight.com/blog/it-ops/webgl-and-three-js)
 - [ ] [RawGit- How to use](https://cdn.rawgit.com/alexmackey/threeJsBasicExamples/6f009a0a8d7aaed3ca64b9041dd050ac8d89b8a3/index.html)
+- [ ] [jQuery .attr() vs .prop()](https://stackoverflow.com/questions/18097875/jquery-is-changing-checkbox-value-but-the-checkbox-is-not-displaying-as-checked)
