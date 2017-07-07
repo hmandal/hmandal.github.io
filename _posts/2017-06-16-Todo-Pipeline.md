@@ -37,3 +37,4 @@ Expand to see content.
 - [ ] [GitHub: How to make a fork of public repository private](https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private)
 - [ ] [JavaScript: check if variable exists (is defined/initialized)](https://stackoverflow.com/questions/5113374/javascript-check-if-variable-exists-is-defined-initialized)
 - [ ] [JavaScript: convert string to a Javascript function on demand](https://stackoverflow.com/questions/10901217/convert-string-was-a-function-back-to-function-in-javascript)
+- [ ] [Convert JS DOM object (circular structure) to JSON (or string)](https://stackoverflow.com/questions/11616630/json-stringify-avoid-typeerror-converting-circular-structure-to-json)
