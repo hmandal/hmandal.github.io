@@ -39,3 +39,4 @@ Expand to see content.
 - [ ] [JavaScript: convert string to a Javascript function on demand](https://stackoverflow.com/questions/10901217/convert-string-was-a-function-back-to-function-in-javascript)
 - [ ] [Convert JS DOM object (circular structure) to JSON (or string)](https://stackoverflow.com/questions/11616630/json-stringify-avoid-typeerror-converting-circular-structure-to-json)
 - [ ] [Deep clone an object in JavaScript](https://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-deep-clone-an-object-in-javascript)
+- [ ] [Coffeescript error: unmatched OUTDENT](https://stackoverflow.com/questions/38893553/unmatched-outdent-in-coffeescript-code)
