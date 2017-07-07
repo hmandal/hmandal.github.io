@@ -35,3 +35,4 @@ Expand to see content.
 - [ ] [Backbone => vs ->](https://stackoverflow.com/questions/8965855/coffeescript-when-to-use-fat-arrow-over-arrow-and-vice-versa)
 - [ ] [JS Get current script execution path](https://stackoverflow.com/questions/8523200/javascript-get-current-filescript-path)
 - [ ] [GitHub: How to make a fork of public repository private](https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private)
+- [ ] [JavaScript: check if variable exists (is defined/initialized)](https://stackoverflow.com/questions/5113374/javascript-check-if-variable-exists-is-defined-initialized)
