@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My First post!
-tags: [first-post, hello-world]
+tags: [first-post, hello-world, non-technical]
 date: 2017-06-15
 published: true
 ---

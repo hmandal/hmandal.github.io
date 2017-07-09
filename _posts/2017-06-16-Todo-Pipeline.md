@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Todo Pipeline
+excerpt: Expand to see content.
 tags: [todo]
 date: 2017-06-17
 published: true
@@ -40,3 +41,6 @@ Expand to see content.
 - [ ] [Convert JS DOM object (circular structure) to JSON (or string)](https://stackoverflow.com/questions/11616630/json-stringify-avoid-typeerror-converting-circular-structure-to-json)
 - [ ] [Deep clone an object in JavaScript](https://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-deep-clone-an-object-in-javascript)
 - [ ] [Coffeescript error: unmatched OUTDENT](https://stackoverflow.com/questions/38893553/unmatched-outdent-in-coffeescript-code)
+- [ ] [Markdown Collapsible content](https://gist.github.com/ericclemmons/b146fe5da72ca1f706b2ef72a20ac39d)
+- [ ] [Jekyll blog- Add custom js](https://mchirico.github.io/javascript/2016/12/22/JavascriptNetwork.html)
+- [ ] Handle AdBlockers
