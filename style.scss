@@ -21,6 +21,10 @@
   content: "\2610\ ";
 }
 
+.expandable-header {
+    cursor: hand;
+}
+
 .expandable-content {
     display: none;
     padding-left : 25px;
