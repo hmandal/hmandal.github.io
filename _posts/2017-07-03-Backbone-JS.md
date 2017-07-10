@@ -7,7 +7,7 @@ js_arr:
 - scripts/default.js
 tags: [backbone.js, short reading, javascript, technical]
 date: 2017-07-03
-published: true
+published: false
 ---
 
 ## Backbone.JS
