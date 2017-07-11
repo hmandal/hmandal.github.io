@@ -29,7 +29,10 @@ $(function(){
             $header.children('span').replaceWith(function () {
                 //change text based on condition
                 return $content.is(":visible") ? $COLLAPSE_ELE.clone() : $EXPAND_ELE.clone();
-            });
+            })
+            $('html, body').animate({
+                scrollTop: $header.offset().top
+            }, 500);
         });
     }
 });
