@@ -44,3 +44,5 @@ Expand to see content.
 - [ ] [Markdown Collapsible content](https://gist.github.com/ericclemmons/b146fe5da72ca1f706b2ef72a20ac39d)
 - [ ] [Jekyll blog- Add custom js](https://mchirico.github.io/javascript/2016/12/22/JavascriptNetwork.html)
 - [ ] Handle AdBlockers
+- [ ] [Kramdown Add Style to Table](https://stackoverflow.com/questions/28806135/jekyll-kramdown-how-to-display-table-border)
+- [ ] [parse_block_html: true](https://stackoverflow.com/questions/28379364/jekyll-kramdown-footnotes-not-parsing)
