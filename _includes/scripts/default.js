@@ -28,7 +28,7 @@ $(function(){
             //change text of header based on visibility of content div
             $header.children('span').replaceWith(function () {
                 //change text based on condition
-                return $content.is(":visible") ? $COLLAPSE_ELE : $EXPAND_ELE;
+                return $content.is(":visible") ? $COLLAPSE_ELE.clone() : $EXPAND_ELE.clone();
             });
         });
     }
