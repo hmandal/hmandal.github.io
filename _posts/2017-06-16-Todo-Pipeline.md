@@ -46,3 +46,4 @@ Expand to see content.
 - [ ] Handle AdBlockers
 - [ ] [Kramdown Add Style to Table](https://stackoverflow.com/questions/28806135/jekyll-kramdown-how-to-display-table-border)
 - [ ] [parse_block_html: true](https://stackoverflow.com/questions/28379364/jekyll-kramdown-footnotes-not-parsing)
+- [ ] [Existential Operator in CoffeeScript](http://valve.github.io/blog/2013/07/13/existential-operator-in-coffeescript/)
