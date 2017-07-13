@@ -36,6 +36,15 @@ Any attribute on any element whose attribute name starts with `data-` is a data 
 </article>
 ```
 
+Take another example:
+
+```javascript
+var list = "";
+$.each(data, function (index, value) {
+list += "<li id=‘item-" + value.Id + “’>" + value.Name + "</li>";
+});
+$("ul").append(list);
+```
 </div>
 
 It's good to know this but don't use it.
@@ -82,16 +91,38 @@ It often renders the data from a specific model, or number of models — but vie
 Models should be generally unaware of views. Instead, views listen to the model **"`change`"** events, and react or re-render themselves appropriately.
 
 ![Image of backbone Model-View interaction](/images/model-view-interaction.svg "Model-View interaction")
-</div>
 
 Ok, enough talking, let's get our hands dirty:
+
+We'll create a model for a TODO App (which is becoming the "Hello World" for dynamic apps).
+
+
+</div>
 
 ### Collections
 <div class="expandable-header"></div>
 <div class="expandable-content">
-A Collection helps you deal with a **group of related models**, handling the **loading** and **saving** of new models to the server and providing **helper functions** for performing aggregations or computations against a list of models. Aside from their own events, collections also **proxy** through all of the events that occur to models within them, allowing you to listen in one place for any change that might happen to any model in the collection.
+A Collection helps you deal with a **group of related models**, handling the **loading** and **saving** of new models to the server and providing **helper functions** for performing aggregations or computations against a list of models. Aside from their own events, collections also <abbr title="Means if your model triggers an event, your collection can re-direct the event to another model or perform some action in the collection itself">**proxy**</abbr> through all of the events that occur to models within them, allowing you to **listen in one place** for any change that might happen to **any model** in the collection.
 
 ![Image of backbone Collection](/images/collection.svg "Backbone Collection")
+
+Backbone is pre-configured to sync with a RESTful API. Simply create a new Collection with the url of your resource endpoint:
+
+```javascript
+var Books = Backbone.Collection.extend({
+  url: '/books'
+});
+```
+
+The Collection and Model components together form a direct mapping of REST resources using the following methods:
+
+```
+GET  /books/ .... collection.fetch();
+POST /books/ .... collection.create();
+GET  /books/1 ... model.fetch();
+PUT  /books/1 ... model.save();
+DEL  /books/1 ... model.destroy();
+```
 </div>
 
 - [ ] class ListView extends Backbone.**View**
