@@ -21,13 +21,17 @@
   content: "\2610\ ";
 }
 
-.expandable-header, .content-collapse {
-    cursor: pointer;
+.expandable-header, .content-collapse, .expand-all {
+  cursor: pointer;
 }
 
 .expandable-content {
-    display: none;
-    padding-left : 25px;
+  display: none;
+  padding-left : 25px;
+}
+
+.expand-all{
+  text-align: right;
 }
 
 table, td, th {
