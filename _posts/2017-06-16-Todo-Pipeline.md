@@ -48,3 +48,5 @@ Expand to see content.
 - [ ] [parse_block_html: true](https://stackoverflow.com/questions/28379364/jekyll-kramdown-footnotes-not-parsing)
 - [ ] [Existential Operator in CoffeeScript](http://valve.github.io/blog/2013/07/13/existential-operator-in-coffeescript/)
 - [ ] Yeoman
+- [ ] MQTT vs. HTTP
+- [ ] Backbone vs. Knockout
