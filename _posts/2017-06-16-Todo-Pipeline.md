@@ -50,3 +50,4 @@ Expand to see content.
 - [ ] Yeoman
 - [ ] MQTT vs. HTTP
 - [ ] Backbone vs. Knockout
+- [ ] [fn.call vs. fn.apply](https://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply)[ vs fn.bind](https://stackoverflow.com/questions/15455009/javascript-call-apply-vs-bind)
