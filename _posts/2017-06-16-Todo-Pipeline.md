@@ -47,3 +47,10 @@ Expand to see content.
 - [ ] [Kramdown Add Style to Table](https://stackoverflow.com/questions/28806135/jekyll-kramdown-how-to-display-table-border)
 - [ ] [parse_block_html: true](https://stackoverflow.com/questions/28379364/jekyll-kramdown-footnotes-not-parsing)
 - [ ] [Existential Operator in CoffeeScript](http://valve.github.io/blog/2013/07/13/existential-operator-in-coffeescript/)
+- [ ] Yeoman
+- [ ] MQTT vs. HTTP
+- [ ] Backbone vs. Knockout
+- [ ] [fn.call vs. fn.apply](https://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply)[ vs fn.bind](https://stackoverflow.com/questions/15455009/javascript-call-apply-vs-bind)
+- [ ] [$(function(){}) vs (function(){})()](https://stackoverflow.com/questions/7642442/what-does-function-do)
+- [ ] [Variable and Function Hoisting in JavaScript](http://adripofjavascript.com/blog/drips/variable-and-function-hoisting)
+- [ ] [Why does Google prepend while(1); to their JSON responses?](https://stackoverflow.com/questions/2669690/why-does-google-prepend-while1-to-their-json-responses/2669766#2669766)
