@@ -58,3 +58,4 @@ Expand to see content.
 - [ ] [\*.h or \*.hpp](https://stackoverflow.com/questions/152555/h-or-hpp-for-your-class-definitions)
 - [ ] [scoped\_lock ](https://stackoverflow.com/questions/14276508/how-does-scope-locking-work)
 - [ ] [C++ Boost libraries](https://stackoverflow.com/questions/125580/what-are-the-advantages-of-using-the-c-boost-libraries)
+- [ ] [What exactly is metaprogramming?](https://stackoverflow.com/questions/514644/what-exactly-is-metaprogramming)
