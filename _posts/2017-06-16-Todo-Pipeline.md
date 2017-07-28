@@ -54,3 +54,5 @@ Expand to see content.
 - [ ] [$(function(){}) vs (function(){})()](https://stackoverflow.com/questions/7642442/what-does-function-do)
 - [ ] [Variable and Function Hoisting in JavaScript](http://adripofjavascript.com/blog/drips/variable-and-function-hoisting)
 - [ ] [Why does Google prepend while(1); to their JSON responses?](https://stackoverflow.com/questions/2669690/why-does-google-prepend-while1-to-their-json-responses/2669766#2669766)
+- [ ] [C++ reinterpret\_cast vs static\_cast](https://stackoverflow.com/questions/573294/when-to-use-reinterpret-cast)
+- [ ] [\*.h or *.hpp](https://stackoverflow.com/questions/152555/h-or-hpp-for-your-class-definitions)
