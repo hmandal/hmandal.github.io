@@ -10,6 +10,7 @@ $(function(){
 
     $(".expandable-header").on('click', toggleExpandHeader);
     $(".expand-all").on('click', expandAll);
+    $(".expand-all").click();
 
     function initialize(){
         $(".expandable-header").append($EXPAND_ELE);
