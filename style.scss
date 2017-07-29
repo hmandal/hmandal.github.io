@@ -12,6 +12,17 @@
 /**************/
 /* CUSTOM RULES */
 /**************/
+.d2h-diff-tbody > tr > td,
+.d2h-diff-table{
+  border: none !important;
+  padding: 0px !important;
+}
+
+.diff-container{
+  width: 95vw;
+  margin-left: calc(-1 * ((95vw - 100%) / 2));/* align left edge to the left edge of the viewport */
+  /* The above is basically saying to set the left margin to minus the width of the viewport MINUS the width of the parent, divided by two, so the left edge of the viewport */
+}
 
 .box_done:before {
   content: "\2611\ ";
