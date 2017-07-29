@@ -22,12 +22,19 @@ layout: default
 
   {% include disqus.html %}
 </article>
-<!-- Stuff for js_arr tag  -->
 
+<!-- Stuff for css_arr tag  -->
+{% for css in page.css_arr %}
+  <style type="text/css" rel="stylesheet">
+     {% include {{ css }} %}
+  </style>
+{% endfor %}
+<!-- End Stuff for css_arr tag  -->
+
+<!-- Stuff for js_arr tag  -->
 {% for js in page.js_arr %}
   <script type="text/javascript">
      {% include {{ js }} %}
   </script>
 {% endfor %}
-
 <!-- End Stuff for js_arr tag  -->
