@@ -59,3 +59,5 @@ Expand to see content.
 - [ ] [scoped\_lock ](https://stackoverflow.com/questions/14276508/how-does-scope-locking-work)
 - [ ] [C++ Boost libraries](https://stackoverflow.com/questions/125580/what-are-the-advantages-of-using-the-c-boost-libraries)
 - [ ] [What exactly is metaprogramming?](https://stackoverflow.com/questions/514644/what-exactly-is-metaprogramming)
+- [ ] [If bitcoin is indivisible, where does change come from?](https://bitcoin.stackexchange.com/questions/56689/if-bitcoin-is-indivisible-where-does-change-come-from/56692#56692)
+- [ ] [Reductio ad absurdum](https://bitcoin.stackexchange.com/questions/55102/should-i-continue-using-this-bitcoin-doubler)
