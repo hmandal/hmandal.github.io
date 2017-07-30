@@ -21,6 +21,7 @@ Expand to see content.
 - [ ] Reduce loading times
 - [ ] Add commenting feature
 - [ ] Explore [textpen](https://jekyllrb.com/docs/extras/)
+- [ ] Add cycling quotes feature.
 
 ## Content:
 
