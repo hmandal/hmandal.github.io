@@ -62,3 +62,8 @@ Expand to see content.
 - [ ] [What exactly is metaprogramming?](https://stackoverflow.com/questions/514644/what-exactly-is-metaprogramming)
 - [ ] [If bitcoin is indivisible, where does change come from?](https://bitcoin.stackexchange.com/questions/56689/if-bitcoin-is-indivisible-where-does-change-come-from/56692#56692)
 - [ ] [Reductio ad absurdum](https://bitcoin.stackexchange.com/questions/55102/should-i-continue-using-this-bitcoin-doubler)
+- [ ] [Embed javascript in markdown](https://stackoverflow.com/questions/2754391/embed-javascript-in-markdown)
+- [ ] [diff2html](https://github.com/rtfpessoa/diff2html#how-to-use)
+- [ ] [“Unterminated template literal” syntax error when literal contains script tag](https://stackoverflow.com/questions/36607932/unterminated-template-literal-syntax-error-when-literal-contains-script-tag/36607971)
+- [ ] [Do <style> tags work in Markdown?](https://stackoverflow.com/questions/20598628/do-style-tags-work-in-markdown)
+- [ ] [Creating multiline strings in JavaScript](https://stackoverflow.com/questions/805107/creating-multiline-strings-in-javascript)
