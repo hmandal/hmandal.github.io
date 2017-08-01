@@ -69,3 +69,4 @@ Expand to see content.
 - [ ] [Creating multiline strings in JavaScript](https://stackoverflow.com/questions/805107/creating-multiline-strings-in-javascript)
 - [ ] [Bitcoins](https://multibit.org/learn-bitcoin/faq.html)[, Bitcoins](https://bitcoin.stackexchange.com/questions/44579/how-is-a-block-header-hash-compared-to-the-target-bits)[, Bitcoins](https://bitcoin.org/bitcoin.pdf)[and Bitcoins](https://bitcoin.stackexchange.com/a/373/56423).
 - [ ] JIRA- Watch for Project Changes.
+- [ ] Text color in GFM.
