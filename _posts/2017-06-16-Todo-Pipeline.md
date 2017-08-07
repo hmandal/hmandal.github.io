@@ -72,3 +72,4 @@ Expand to see content.
 - [ ] Text color in GFM.
 - [ ] [Extract Subtitles from YouTube](https://www.quora.com/Is-there-a-way-to-extract-the-automatically-generated-subtitles-in-YouTube)
 - [ ] [Js: `text()` to get text without html tags](https://stackoverflow.com/questions/19228839/why-i-cant-get-value-of-label-with-jquery-and-javascript)
+- [ ] [Jekyll: error:liquid looks for tags with {{](https://github.com/jekyll/jekyll/issues/5458)
