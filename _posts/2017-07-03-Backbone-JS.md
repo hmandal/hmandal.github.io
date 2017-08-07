@@ -22,6 +22,10 @@ date: 2017-07-03
 published: true
 ---
 
+<div class = "diff-container">
+  <div id="url-diff-container"></div>
+</div>
+
 ## Backbone.JS
 
 Backbone.js is basically an uber-light framework that allows you to structure your Javascript code in a **MVC** (Model, View, Controller) fashion.
@@ -430,6 +434,48 @@ Models should be generally unaware of views. Instead, views listen to the model 
 ![Image of backbone Model-View interaction](/images/Backbone-JS/model-view-interaction.svg "Model-View interaction")
 
 Now we will add some html to support our `TodoView`, and the `TodoView` itself.
+
+=== index.html ===
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Backbone.js Todos</title>
+  <link rel="stylesheet" href="styles/styles.css"/>
+</head>
+
+<body>
+
+  <div id="todoapp">
+
+    <header>
+      <h1>Todos</h1>
+      <input id="new-todo" type="text">
+    </header>
+
+  </div>
+
+  <!-- scripts -->
+  <script src="scripts/vendor/jquery-3.2.1.min.js"></script>
+  <script src="scripts/vendor/underscore-min.js"></script>
+  <script src="scripts/vendor/backbone-min.js"></script>
+  <script src="scripts/App.js"></script>
+
+  <!-- Templates -->
+  <script type="text/template" id="item-template">
+    <div class="view">
+      <label><%- title %></label>
+    </div>
+  </script>
+
+  </body>
+</html>
+```
+
+=== App.js ===
+
 
 ```patch
 Subject: [PATCH] step-02: Create Todo View.
