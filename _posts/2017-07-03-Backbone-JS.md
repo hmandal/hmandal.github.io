@@ -2,13 +2,29 @@
 layout: post
 title: (Draft)Backbone.JS > Why Backbone? > What is it? > How it works? > Current Support > Future goals
 excerpt: Backbone.js is basically an uber-light framework that allows you to structure your Javascript code in a MVC (Model, View, Controller) fashion.
+
 js_arr:
 - scripts/jquery-3.2.1.min.js
 - scripts/expandable-header.js
+
+- scripts/highlight.min.js
+- scripts/xml.min.js
+- scripts/diff2html-ui.min.js
+- scripts/diff2html.min.js
+- scripts/git-diff.js
+
+css_arr:
+- styles/github.min.css
+- styles/diff2html.min.css
+
 tags: [backbone.js, short reading, javascript, technical]
 date: 2017-07-03
 published: true
 ---
+
+<div class = "diff-container">
+  <div id="url-diff-container"></div>
+</div>
 
 ## Backbone.JS
 
@@ -106,7 +122,7 @@ Download links:
 <a href="http://underscorejs.org/underscore-min.js">http://underscorejs.org/underscore-min.js</a>
 </div>
 
-`index.html`:
+=== `index.html` ===
 
 ```html
 <!DOCTYPE html>
@@ -158,6 +174,8 @@ Ok, enough talking, let's get our hands dirty:
 
 We'll create a model for a TODO App (which is becoming the "Hello World" for dynamic apps).
 
+=== `App.js` ===
+
 ```javascript
 // Our basic **Todo** model has a `title` attribute.
 var Todo = Backbone.Model.extend({
@@ -181,6 +199,49 @@ It often renders the data from a specific model, or number of models — but vie
 Models should be generally unaware of views. Instead, views listen to the model **"`change`"** events, and react or re-render themselves appropriately.
 
 ![Image of backbone Model-View interaction](/images/Backbone-JS/model-view-interaction.svg "Model-View interaction")
+
+Now we will add some html to support our `TodoView`.
+
+=== index.html ===
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Backbone.js Todos</title>
+  <link rel="stylesheet" href="styles/styles.css"/>
+</head>
+
+<body>
+
+  <div id="todoapp">
+
+    <header>
+      <h1>Todos</h1>
+      <input id="new-todo" type="text">
+    </header>
+
+  </div>
+
+  <!-- scripts -->
+  <script src="scripts/vendor/jquery-3.2.1.min.js"></script>
+  <script src="scripts/vendor/underscore-min.js"></script>
+  <script src="scripts/vendor/backbone-min.js"></script>
+  <script src="scripts/App.js"></script>
+
+  <!-- Templates -->
+  <script type="text/template" id="item-template">
+    <div class="view">
+      <label><%- title %></label>
+    </div>
+  </script>
+
+  </body>
+</html>
+```
+
+=== App.js ===
 
 ```javascript
 // The DOM element for a todo item...
@@ -272,7 +333,7 @@ Now we need to add some behaviour to our Todo Model manually:
 ```javascript
 var Todo = Backbone.Model.extend({
 
-	// Default attributes for the todo item.
+  // Default attributes for the todo item.
   defaults: function() {
     return {
       title: "empty todo...",
@@ -280,7 +341,7 @@ var Todo = Backbone.Model.extend({
     };
   },
 
-	// Toggle the done state of this todo item.
+  // Toggle the done state of this todo item.
   toggle: function() {
     this.save({done: !this.get("done")});
   }
@@ -292,15 +353,15 @@ Now we will add some behaviour to our TodoList Collection:
 ```javascript
 var TodoList = Backbone.Collection.extend({
 
-	// Reference to this collection’s model.
+  // Reference to this collection’s model.
   model: Todo,
 
-	// Filter down the list of all todo items that are finished.
+  // Filter down the list of all todo items that are finished.
   done: function() {
     return this.where({done: true});
   },
 
-	// Filter down the list to only todo items that are still not finished.
+  // Filter down the list to only todo items that are still not finished.
   remaining: function() {
     return this.where({done: false});
   },

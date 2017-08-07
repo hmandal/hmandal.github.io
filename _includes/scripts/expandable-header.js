@@ -1,6 +1,6 @@
-$(function(){
+{% raw %}$(function(){
     // variables
-    var $EXPAND_ELE = $('<span>').text("► Expand");
+    var $EXPAND_ELE = $('<span>').text("► Expand (Skip if you already know!)");
     var $EXPAND_ALL_TXT = "[► Expand all]"
     var $COLLAPSE_ELE = $('<span>').text("▼ Collapse");
     var $COLLAPSE_ALL_TXT = "[▼ Collapse all]"
@@ -61,4 +61,4 @@ $(function(){
             });
         });
     }
-});
+});{% endraw %}
