@@ -21,6 +21,37 @@ date: 2017-07-03
 published: true
 ---
 
+```diff
+diff --git a/index.html b/index.html
+index 74b9b68..651e9ff 100644
+--- a/index.html
++++ b/index.html
+@@ -15,6 +15,10 @@
+       <input id="new-todo" type="text">
+     </header>
+ 
++    <section id="main">
++      <ul id="todo-list"></ul>
++    </section>
++
+   </div>
+ 
+  <!-- scripts -->
+@@ -23,5 +27,12 @@
+  <script src="scripts/vendor/backbone-min.js"><\/script>
+  <script src="scripts/App.js"><\/script>
+ 
++  <!-- Templates -->
++  <script type="text/template" id="item-template">
++    <div class="view">
++      <label><%- title %></label>
++    </div>
++  <\/script>
++
+   </body>
+ </html>
+\ No newline at end of file
+```
 <div class = "diff-container">
   <div id="url-diff-container"></div>
 </div>
