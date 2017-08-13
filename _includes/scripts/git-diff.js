@@ -1,34 +1,36 @@
 {% raw %}
 $(function(){
-  var data_elem = $('.diff-container').prev('.language-diff');
-  var data = $('.diff-container').prev('.language-diff').text();
+  $('.diff-container').each(function(i){
+    var data_elem = $(this).prev('.language-diff');
+    var data = data_elem.text();
 
-  // remove the original diff
-  data_elem.remove();
+    // remove the original diff
+    data_elem.remove();
 
-  var outputFormat = 'side-by-side';
-  // var outputFormat = 'line-by-line';
+    var outputFormat = 'side-by-side';
+    // var outputFormat = 'line-by-line';
 
-  var $container = $('.diff-container');
-  var container = '#url-diff-container';
+    var $container = $('.diff-container');
+    var container = '.url-diff-container';
 
-  var diff2htmlUi = new Diff2HtmlUI({diff: data});
+    var diff2htmlUi = new Diff2HtmlUI({diff: data});
 
-  // if (outputFormat === 'side-by-side') {
-  //   $container.css({'width': '100% !important'});
-  // } else {
-  //   $container.css({'width': ''});
-  // }
+    // if (outputFormat === 'side-by-side') {
+    //   $container.css({'width': '100% !important'});
+    // } else {
+    //   $container.css({'width': ''});
+    // }
 
-  diff2htmlUi.draw(container, {
-    outputFormat: outputFormat,
-    showFiles: true,
-    matching: 'words',
-    matchWordsThreshold: 0.25,
-    matchingMaxComparisons: 2500,
-    synchronisedScroll: true
+    diff2htmlUi.draw(container, {
+      outputFormat: outputFormat,
+      showFiles: true,
+      matching: 'words',
+      matchWordsThreshold: 0.25,
+      matchingMaxComparisons: 2500,
+      synchronisedScroll: true
+    });
+    diff2htmlUi.fileListCloseable(container, false);
+    diff2htmlUi.highlightCode(container);
   });
-  diff2htmlUi.fileListCloseable(container, false);
-  diff2htmlUi.highlightCode(container);
-});
+  });
 {% endraw %}
