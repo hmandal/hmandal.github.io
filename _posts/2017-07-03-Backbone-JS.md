@@ -39,22 +39,22 @@ index 74b9b68..651e9ff 100644
  
   <!-- scripts -->
 @@ -23,5 +27,12 @@
-  <script src="scripts/vendor/backbone-min.js"><\/script>
-  <script src="scripts/App.js"><\/script>
+  <script src="scripts/vendor/backbone-min.js"></script>
+  <script src="scripts/App.js"></script>
  
 +  <!-- Templates -->
 +  <script type="text/template" id="item-template">
 +    <div class="view">
 +      <label><%- title %></label>
 +    </div>
-+  <\/script>
++  </script>
 +
    </body>
  </html>
 \ No newline at end of file
 ```
 <div class = "diff-container">
-  <div id="url-diff-container"></div>
+  <div class = "url-diff-container"></div>
 </div>
 
 ## Backbone.JS
