@@ -4,13 +4,12 @@ title: (Draft)Backbone.JS > Why Backbone? > What is it? > How it works? > Curren
 excerpt: Backbone.js is basically an uber-light framework that allows you to structure your Javascript code in a MVC (Model, View, Controller) fashion.
 
 js_arr:
-- scripts/jquery-3.2.1.min.js
+- scripts/jquery-3.2.1.js
 - scripts/expandable-header.js
 
-- scripts/highlight.min.js
-- scripts/xml.min.js
-- scripts/diff2html-ui.min.js
-- scripts/diff2html.min.js
+- scripts/highlight.js
+- scripts/diff2html-ui.js
+- scripts/diff2html.js
 - scripts/git-diff.js
 
 css_arr:

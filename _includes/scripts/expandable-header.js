@@ -1,4 +1,5 @@
-{% raw %}$(function(){
+{% raw %}
+$(function(){
     // variables
     var $EXPAND_ELE = $('<span>').text("► Expand (Skip if you already know!)");
     var $EXPAND_ALL_TXT = "[► Expand all]"
@@ -61,4 +62,5 @@
             });
         });
     }
-});{% endraw %}
+});
+{% endraw %}

@@ -1,4 +1,5 @@
-{% raw %}$(function(){
+{% raw %}
+$(function(){
   var data = `diff --git a/index.html b/index.html
 index 74b9b68..651e9ff 100644
 --- a/index.html
@@ -53,4 +54,5 @@ index 74b9b68..651e9ff 100644
   });
   diff2htmlUi.fileListCloseable(container, false);
   diff2htmlUi.highlightCode(container);
-});{% endraw %}
+});
+{% endraw %}
