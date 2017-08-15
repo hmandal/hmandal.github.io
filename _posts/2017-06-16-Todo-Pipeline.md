@@ -21,6 +21,7 @@ Expand to see content.
 - [ ] Reduce loading times
 - [ ] Add commenting feature
 - [ ] Explore [textpen](https://jekyllrb.com/docs/extras/)
+- [ ] Add cycling quotes feature.
 
 ## Content:
 
@@ -54,3 +55,22 @@ Expand to see content.
 - [ ] [$(function(){}) vs (function(){})()](https://stackoverflow.com/questions/7642442/what-does-function-do)
 - [ ] [Variable and Function Hoisting in JavaScript](http://adripofjavascript.com/blog/drips/variable-and-function-hoisting)
 - [ ] [Why does Google prepend while(1); to their JSON responses?](https://stackoverflow.com/questions/2669690/why-does-google-prepend-while1-to-their-json-responses/2669766#2669766)
+- [ ] [C++ reinterpret\_cast vs static\_cast](https://stackoverflow.com/questions/573294/when-to-use-reinterpret-cast)
+- [ ] [\*.h or \*.hpp](https://stackoverflow.com/questions/152555/h-or-hpp-for-your-class-definitions)
+- [ ] [scoped\_lock ](https://stackoverflow.com/questions/14276508/how-does-scope-locking-work)
+- [ ] [C++ Boost libraries](https://stackoverflow.com/questions/125580/what-are-the-advantages-of-using-the-c-boost-libraries)
+- [ ] [What exactly is metaprogramming?](https://stackoverflow.com/questions/514644/what-exactly-is-metaprogramming)
+- [ ] [If bitcoin is indivisible, where does change come from?](https://bitcoin.stackexchange.com/questions/56689/if-bitcoin-is-indivisible-where-does-change-come-from/56692#56692)
+- [ ] [Reductio ad absurdum](https://bitcoin.stackexchange.com/questions/55102/should-i-continue-using-this-bitcoin-doubler)
+- [ ] [Embed javascript in markdown](https://stackoverflow.com/questions/2754391/embed-javascript-in-markdown)
+- [ ] [diff2html](https://github.com/rtfpessoa/diff2html#how-to-use)
+- [ ] [“Unterminated template literal” syntax error when literal contains script tag](https://stackoverflow.com/questions/36607932/unterminated-template-literal-syntax-error-when-literal-contains-script-tag/36607971)
+- [ ] [Do <style> tags work in Markdown?](https://stackoverflow.com/questions/20598628/do-style-tags-work-in-markdown)
+- [ ] [Creating multiline strings in JavaScript](https://stackoverflow.com/questions/805107/creating-multiline-strings-in-javascript)
+- [ ] [Bitcoins](https://multibit.org/learn-bitcoin/faq.html)[, Bitcoins](https://bitcoin.stackexchange.com/questions/44579/how-is-a-block-header-hash-compared-to-the-target-bits)[, Bitcoins](https://bitcoin.org/bitcoin.pdf)[and Bitcoins](https://bitcoin.stackexchange.com/a/373/56423).
+- [ ] JIRA- Watch for Project Changes.
+- [ ] Text color in GFM.
+- [ ] [Extract Subtitles from YouTube](https://www.quora.com/Is-there-a-way-to-extract-the-automatically-generated-subtitles-in-YouTube)
+- [ ] [Js: `text()` to get text without html tags](https://stackoverflow.com/questions/19228839/why-i-cant-get-value-of-label-with-jquery-and-javascript)
+- [ ] [Jekyll: error:liquid looks for tags with {{](https://github.com/jekyll/jekyll/issues/5458)
+- [ ] [Unix: What is the exact difference between a 'terminal', a 'shell', a 'tty' and a 'console'?](https://unix.stackexchange.com/questions/4126/what-is-the-exact-difference-between-a-terminal-a-shell-a-tty-and-a-con/4132)
