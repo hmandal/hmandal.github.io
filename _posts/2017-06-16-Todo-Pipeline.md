@@ -74,3 +74,4 @@ Expand to see content.
 - [ ] [Js: `text()` to get text without html tags](https://stackoverflow.com/questions/19228839/why-i-cant-get-value-of-label-with-jquery-and-javascript)
 - [ ] [Jekyll: error:liquid looks for tags with {{](https://github.com/jekyll/jekyll/issues/5458)
 - [ ] [Unix: What is the exact difference between a 'terminal', a 'shell', a 'tty' and a 'console'?](https://unix.stackexchange.com/questions/4126/what-is-the-exact-difference-between-a-terminal-a-shell-a-tty-and-a-con/4132)
+- [ ] [Implement Statistics for Todo (Success, Failed, How many times used, etc)](https://gist.github.com/hmandal/de74eb101ea965dbbbce26326b496de2)
