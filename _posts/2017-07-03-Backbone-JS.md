@@ -22,41 +22,6 @@ date: 2017-07-03
 published: true
 ---
 
-```diff
-diff --git a/index.html b/index.html
-index 74b9b68..651e9ff 100644
---- a/index.html
-+++ b/index.html
-@@ -15,6 +15,10 @@
-       <input id="new-todo" type="text">
-     </header>
- 
-+    <section id="main">
-+      <ul id="todo-list"></ul>
-+    </section>
-+
-   </div>
- 
-  <!-- scripts -->
-@@ -23,5 +27,12 @@
-  <script src="scripts/vendor/backbone-min.js"></script>
-  <script src="scripts/App.js"></script>
- 
-+  <!-- Templates -->
-+  <script type="text/template" id="item-template">
-+    <div class="view">
-+      <label><%- title %></label>
-+    </div>
-+  </script>
-+
-   </body>
- </html>
-\ No newline at end of file
-```
-<div class = "diff-container">
-  <div class = "url-diff-container"></div>
-</div>
-
 ## Backbone.JS
 
 Backbone.js is basically an uber-light framework that allows you to structure your Javascript code in a **MVC** (Model, View, Controller) fashion.
@@ -466,48 +431,6 @@ Models should be generally unaware of views. Instead, views listen to the model 
 
 Now we will add some html to support our `TodoView`, and the `TodoView` itself.
 
-=== index.html ===
-
-```html
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title>Backbone.js Todos</title>
-  <link rel="stylesheet" href="styles/styles.css"/>
-</head>
-
-<body>
-
-  <div id="todoapp">
-
-    <header>
-      <h1>Todos</h1>
-      <input id="new-todo" type="text">
-    </header>
-
-  </div>
-
-  <!-- scripts -->
-  <script src="scripts/vendor/jquery-3.2.1.min.js"></script>
-  <script src="scripts/vendor/underscore-min.js"></script>
-  <script src="scripts/vendor/backbone-min.js"></script>
-  <script src="scripts/App.js"></script>
-
-  <!-- Templates -->
-  <script type="text/template" id="item-template">
-    <div class="view">
-      <label><%- title %></label>
-    </div>
-  </script>
-
-  </body>
-</html>
-```
-
-=== App.js ===
-
-
 ```patch
 Subject: [PATCH] step-02: Create Todo View.
 
@@ -516,6 +439,34 @@ Subject: [PATCH] step-02: Create Todo View.
  scripts/App.js | 27 +++++++++++++++++++++++++++
  2 files changed, 36 insertions(+)
 
+diff --git a/index.html b/index.html
+index 16529af..422d030 100644
+--- a/index.html
++++ b/index.html
+@@ -27,6 +27,15 @@
+     <script src="scripts/vendor/backbone-min.js"></script>
+     <script src="scripts/App.js"></script>
+ 
++    <!-- Templates -->
++    <script type="text/template" id="item-template">
++      <div class="view">
++        <label>
++          <%- title %>
++        </label>
++      </div>
++    </script>
++
+   </body>
+ 
+ </html>
+diff --git a/scripts/App.js b/scripts/App.js
+@@ -16,4 +16,31 @@ $(function() {
+```patch
+Subject: [PATCH] step-02: Create Todo View.
+---
+ index.html     |  9 +++++++++
+ scripts/App.js | 27 +++++++++++++++++++++++++++
+ 2 files changed, 36 insertions(+)
 diff --git a/index.html b/index.html
 index 16529af..422d030 100644
 --- a/index.html
@@ -827,11 +778,34 @@ index 785d6e4..57065aa 100644
 +    toggle: function() {
 +      this.set('done', !this.get("done"));
      }
+     template: _.template($('#item-template').html()),
+ 
++    // The DOM events specific to an item.
++    events: {
++      "click .toggle": "toggleDone",
++    },
++
+     // The TodoView listens for changes to its model, re-rendering. Since there's
+     // a one-to-one correspondence between a **Todo** and a **TodoView** in this
+     // app, we set a direct reference on the model for convenience.
+@@ -54,7 +65,13 @@ $(function() {
+     // Re-render the titles of the todo item.
+     render: function() {
+       this.$el.html(this.template(this.model.toJSON()));
++      this.$el.toggleClass('done', this.model.get('done'));
+       return this;
++    },
++
++    // Toggle the `"done"` state of the model.
++    toggleDone: function() {
++      this.model.toggle();
+     }
  
    });
 @@ -44,6 +50,11 @@ $(function() {
      // Cache the template function for a single item.
      template: _.template($('#item-template').html()),
+</div>
  
 +    // The DOM events specific to an item.
 +    events: {
@@ -864,17 +838,33 @@ Now you can add a `Todo` as well as check it to mark it as `done`.
 
 ![Image of Todo Done](/images/Backbone-JS/todo-done.png "Todo Done")
 
+     // adding it to a *Local Variable* instead of persisting it to *localStorage*.
+     createOnEnter: function(e) {
+       if (e.keyCode != 13) return;
++      if (!this.input.val()) return;
+ 
+       var todo = new Todo({
+         title: this.input.val()
+<div class = "diff-container">
+  <div class = "url-diff-container"></div>
 </div>
 
 ### Fixed: Can add empty Todo
-<div class="expandable-header"></div>
-<div class="expandable-content">
+diff --git a/scripts/App.js b/scripts/App.js
+index 48ebd21..7127d6c 100644
 Have you noticed that your Todo app is not perfect! It enables blank entries.
-
++++ b/scripts/App.js
+@@ -1,19 +1,46 @@
+ // Load the application once the DOM is ready, using `jQuery.ready`:
+ $(function() {
+   // Handler for .ready() called.
+ 
 ![Image of Todo Empty](/images/Backbone-JS/todo-empty.png "Todo Empty")
-
+   // ----------
+ 
 So here we'll skip adding a Todo if it's empty.
-
+   var Todo = Backbone.Model.extend({
+ 
 ```patch
 Subject: [PATCH] step-06: Fixed: can add empty Todo.
 
@@ -894,6 +884,23 @@ index 57065aa..20e1126 100644
  
        var todo = new Todo({
          title: this.input.val()
++    template: _.template($('#item-template').html()),
++
++    // The TodoView listens for changes to its model, re-rendering. Since there's
++    // a one-to-one correspondence between a **Todo** and a **TodoView** in this
++    // app, we set a direct reference on the model for convenience.
++    initialize: function() {
++      this.listenTo(this.model, 'change', this.render);
++    },
++
++    // Re-render the titles of the todo item.
++    render: function() {
++      this.$el.html(this.template(this.model.toJSON()));
++      return this;
++    }
++
++  });
+ });
 ```
 <div class = "diff-container">
   <div class = "url-diff-container"></div>
