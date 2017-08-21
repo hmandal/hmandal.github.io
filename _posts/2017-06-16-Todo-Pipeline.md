@@ -76,3 +76,4 @@ Expand to see content.
 - [ ] [Unix: What is the exact difference between a 'terminal', a 'shell', a 'tty' and a 'console'?](https://unix.stackexchange.com/questions/4126/what-is-the-exact-difference-between-a-terminal-a-shell-a-tty-and-a-con/4132)
 - [ ] [Implement Statistics for Todo (Success, Failed, How many times used, etc)](https://gist.github.com/hmandal/de74eb101ea965dbbbce26326b496de2)
 - [ ] [Run Specflow from the Command Line](https://gist.github.com/hmandal/63bd944042645bcba4d2393173481222)
+- [ ] [Error handling in PowerShell](https://www.vexasoft.com/blogs/powershell/7255220-powershell-tutorial-try-catch-finally-and-error-handling-in-powershell)
