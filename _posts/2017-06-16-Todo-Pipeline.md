@@ -77,3 +77,4 @@ Expand to see content.
 - [ ] [Implement Statistics for Todo (Success, Failed, How many times used, etc)](https://gist.github.com/hmandal/de74eb101ea965dbbbce26326b496de2)
 - [ ] [Run Specflow from the Command Line](https://gist.github.com/hmandal/63bd944042645bcba4d2393173481222)
 - [ ] [Powershell Scripts in Bamboo: link #1](https://www.vexasoft.com/blogs/powershell/7255220-powershell-tutorial-try-catch-finally-and-error-handling-in-powershell) [, link #2](https://documentation.red-gate.com/display/DLMA1/Use+the+Bamboo+plugin)
+- [ ] Service Fabric: Notes: LoadBalancer knows only URLs.
