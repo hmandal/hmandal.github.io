@@ -78,3 +78,4 @@ Expand to see content.
 - [ ] [Run Specflow from the Command Line](https://gist.github.com/hmandal/63bd944042645bcba4d2393173481222)
 - [ ] [Powershell Scripts in Bamboo: link #1](https://www.vexasoft.com/blogs/powershell/7255220-powershell-tutorial-try-catch-finally-and-error-handling-in-powershell) [, link #2](https://documentation.red-gate.com/display/DLMA1/Use+the+Bamboo+plugin)
 - [ ] Service Fabric: Notes: LoadBalancer knows only URLs.
+- [ ] [Speed Mathematics: Verify Multiplication](https://web.archive.org/web/20031010140429/http://hucellbiol.mdc-berlin.de:80/~mp01mg/oldweb/1mutrach.htm)
