@@ -80,3 +80,4 @@ Expand to see content.
 - [ ] Service Fabric: Notes: LoadBalancer knows only URLs.
 - [ ] [Speed Mathematics: Verify Multiplication](https://web.archive.org/web/20031010140429/http://hucellbiol.mdc-berlin.de:80/~mp01mg/oldweb/1mutrach.htm)
 - [ ] Git rebase vs. merge [link #1](https://medium.com/@porteneuve/getting-solid-at-git-rebase-vs-merge-4fa1a48c53aa), [link #2](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+- [ ] [Avoiding Common Backbone.js Pitfalls](http://ozkatz.github.io/avoiding-common-backbonejs-pitfalls.html)
