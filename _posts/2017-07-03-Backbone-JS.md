@@ -694,6 +694,10 @@ index f5705ea..785d6e4 100644
   <div class = "url-diff-container"></div>
 </div>
 
+At this point you can see that adding a `Todos` item acutally adds it to the `Todo List`.
+
+![Image of Create App-View](/images/Backbone-JS/create-appView.png "Create App-View")
+
 </div>
 
 ### Add "done" functionality
@@ -779,12 +783,20 @@ index 785d6e4..57065aa 100644
   <div class = "url-diff-container"></div>
 </div>
 
+Now you can add a `Todo` as well as check it to mark it as `done`.
+
+![Image of Todo Done](/images/Backbone-JS/todo-done.png "Todo Done")
+
 </div>
 
 ### Fixed: Can add empty Todo
 <div class="expandable-header"></div>
 <div class="expandable-content">
-Have you noticed that your Todo app is not perfect! It enables blank entries. So here we'll not add a Todo if it's empty.
+Have you noticed that your Todo app is not perfect! It enables blank entries.
+
+![Image of Todo Empty](/images/Backbone-JS/todo-empty.png "Todo Empty")
+
+So here we'll skip adding a Todo if it's empty.
 
 ```patch
 Subject: [PATCH] step-06: Fixed: can add empty Todo.
@@ -810,64 +822,14 @@ index 57065aa..20e1126 100644
   <div class = "url-diff-container"></div>
 </div>
 
-```diff
-diff --git a/scripts/App.js b/scripts/App.js
-index 48ebd21..7127d6c 100644
---- a/scripts/App.js
-+++ b/scripts/App.js
-@@ -1,19 +1,46 @@
- // Load the application once the DOM is ready, using `jQuery.ready`:
- $(function() {
-   // Handler for .ready() called.
- 
-   // Todo Model
-   // ----------
- 
-   // Our basic **Todo** model has a `title` attribute.
-   var Todo = Backbone.Model.extend({
- 
-     // Default attributes for the todo item.
-     defaults: function() {
-       return {
-         title: "empty todo...",
-       };
-     }
- 
-   });
-+
-+  // Todo Item View
-+  // --------------
-+
-+  // The DOM element for a todo item...
-+  var TodoView = Backbone.View.extend({
-+
-+    //... is a list tag.
-+    tagName: "li",
-+
-+    // Cache the template function for a single item.
-+    template: _.template($('#item-template').html()),
-+
-+    // The TodoView listens for changes to its model, re-rendering. Since there's
-+    // a one-to-one correspondence between a **Todo** and a **TodoView** in this
-+    // app, we set a direct reference on the model for convenience.
-+    initialize: function() {
-+      this.listenTo(this.model, 'change', this.render);
-+    },
-+
-+    // Re-render the titles of the todo item.
-+    render: function() {
-+      this.$el.html(this.template(this.model.toJSON()));
-+      return this;
-+    }
-+
-+  });
- });
-```
-<div class = "diff-container">
-  <div class = "url-diff-container"></div>
 </div>
 
-</div>
+Congratulations! you've just finished your `Todo Backbone App`.
+
+Here are some things you can explore yourself and are not covered in this blog post:
+
+- Add a persistent store instead of a temp variable to store your `Todos`. Right now if you close your browser, all your `todos` are gone!
+- Add mechanism to delete a `Todo` (Required if you've mistakenly added a `Todo` and wanted to delete it or you might want to clear a completed `Todo`.)
 
 - [ ] class ListView extends Backbone.**View**
 - [ ] el
