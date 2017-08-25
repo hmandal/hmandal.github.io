@@ -429,7 +429,7 @@ Models should be generally unaware of views. Instead, views listen to the model 
 
 ![Image of backbone Model-View interaction](/images/Backbone-JS/model-view-interaction.svg "Model-View interaction")
 
-Now we will add some html to support our `TodoView` and the `TodoView` itself.
+Now we will add some html to support our `TodoView`, and the `TodoView` itself.
 
 ```patch
 Subject: [PATCH] step-02: Create Todo View.
