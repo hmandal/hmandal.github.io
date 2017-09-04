@@ -84,3 +84,4 @@ Expand to see content.
 - [ ] [js: types of equality comparison](https://github.com/tc39/Array.prototype.includes/blob/master/README.md)
 - [ ] [Unix sort command](https://shapeshed.com/unix-sort/)
 - [ ] VS Service Fabric: Play Deployment Sound. [PS: Sound](http://scriptolog.blogspot.in/2007/09/playing-sounds-in-powershell.html), PS Script Path: C:\Program Files\Microsoft SDKs\Service Fabric\Tools\PSModule\ServiceFabricSDK\Get-ServiceFabricApplicationStatus.ps1
+- [ ] [C#: KnownType attribute](https://stackoverflow.com/questions/6266403/knowntype-for-all-derived-types-of-an-abstract-class?rq=1)
