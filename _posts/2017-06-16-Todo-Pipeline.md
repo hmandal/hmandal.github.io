@@ -82,3 +82,4 @@ Expand to see content.
 - [ ] Git rebase vs. merge [link #1](https://medium.com/@porteneuve/getting-solid-at-git-rebase-vs-merge-4fa1a48c53aa), [link #2](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 - [ ] [Avoiding Common Backbone.js Pitfalls](http://ozkatz.github.io/avoiding-common-backbonejs-pitfalls.html), [, Backbone.js Tips](https://developers.supportbee.com/blog/backbone-js-tips-lessons-from-the-trenches/)
 - [ ] [js: types of equality comparison](https://github.com/tc39/Array.prototype.includes/blob/master/README.md)
+- [ ] [Unix sort command](https://shapeshed.com/unix-sort/)
