@@ -85,4 +85,4 @@ Expand to see content.
 - [ ] [Unix sort command](https://shapeshed.com/unix-sort/)
 - [ ] VS Service Fabric: Play Deployment Sound. [PS: Sound](http://scriptolog.blogspot.in/2007/09/playing-sounds-in-powershell.html), PS Script Path: C:\Program Files\Microsoft SDKs\Service Fabric\Tools\PSModule\ServiceFabricSDK\Get-ServiceFabricApplicationStatus.ps1
 - [ ] [C#: KnownType attribute](https://stackoverflow.com/questions/6266403/knowntype-for-all-derived-types-of-an-abstract-class?rq=1)
-- [ ] [Js: Check for undefined nested property](https://stackoverflow.com/questions/2631001/javascript-test-for-existence-of-nested-object-key)
+- [ ] [Js: Check for undefined nested property](https://stackoverflow.com/questions/2631001/javascript-test-for-existence-of-nested-object-key), [, null coalescing operator in JavaScript](https://stackoverflow.com/questions/476436/is-there-a-null-coalescing-operator-in-javascript)
