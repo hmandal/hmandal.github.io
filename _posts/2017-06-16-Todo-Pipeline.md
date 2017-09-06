@@ -87,3 +87,4 @@ Expand to see content.
 - [ ] [C#: KnownType attribute](https://stackoverflow.com/questions/6266403/knowntype-for-all-derived-types-of-an-abstract-class?rq=1)
 - [ ] [Js: Check for undefined nested property](https://stackoverflow.com/questions/2631001/javascript-test-for-existence-of-nested-object-key), [, null coalescing operator in JavaScript](https://stackoverflow.com/questions/476436/is-there-a-null-coalescing-operator-in-javascript)
 - [ ] [Static variables in JavaScript](https://stackoverflow.com/questions/1535631/static-variables-in-javascript) [, this](https://stackoverflow.com/questions/7307243/how-to-declare-a-static-variable-in-javascript)
+- [ ] [.NET MVC Routing doc](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/routing)
