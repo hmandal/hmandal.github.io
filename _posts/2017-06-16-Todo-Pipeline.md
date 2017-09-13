@@ -89,3 +89,4 @@ Expand to see content.
 - [ ] [Static variables in JavaScript](https://stackoverflow.com/questions/1535631/static-variables-in-javascript) [, this](https://stackoverflow.com/questions/7307243/how-to-declare-a-static-variable-in-javascript)
 - [ ] [.NET MVC Routing doc](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/routing)
 - [ ] [c# @ in variable name](https://stackoverflow.com/questions/429529/what-does-the-symbol-before-a-variable-name-mean-in-c)
+- [ ] [c# Task.WhenAll()](https://dotnet.github.io/orleans/Tutorials/Interaction-with-Libraries-and-Services.html#parallelization)
