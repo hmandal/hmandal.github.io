@@ -2,7 +2,16 @@
 $(function(){
   $('.diff-container').each(function(i){
     var data_elem = $(this).prev('.language-diff');
+
+    if (!data_elem.text()){
+      data_elem = $(this).prev('.language-patch');
+    }
     var data = data_elem.text();
+
+    if (!data){
+      console.info("the diff is empty!");
+      return;
+    }
 
     // remove the original diff
     data_elem.remove();
@@ -10,8 +19,8 @@ $(function(){
     var outputFormat = 'side-by-side';
     // var outputFormat = 'line-by-line';
 
-    var $container = $('.diff-container');
-    var container = '.url-diff-container';
+    // var $container = $('.diff-container');
+    var container = $(this).children('.url-diff-container');
 
     var diff2htmlUi = new Diff2HtmlUI({diff: data});
 

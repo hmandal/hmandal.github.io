@@ -8,8 +8,9 @@ js_arr:
 - scripts/expandable-header.js
 
 - scripts/highlight.js
-- scripts/diff2html-ui.js
+- scripts/javascript.min.js
 - scripts/diff2html.js
+- scripts/diff2html-ui.js
 - scripts/git-diff.js
 
 css_arr:
@@ -20,41 +21,6 @@ tags: [backbone.js, short reading, javascript, technical]
 date: 2017-07-03
 published: true
 ---
-
-```diff
-diff --git a/index.html b/index.html
-index 74b9b68..651e9ff 100644
---- a/index.html
-+++ b/index.html
-@@ -15,6 +15,10 @@
-       <input id="new-todo" type="text">
-     </header>
- 
-+    <section id="main">
-+      <ul id="todo-list"></ul>
-+    </section>
-+
-   </div>
- 
-  <!-- scripts -->
-@@ -23,5 +27,12 @@
-  <script src="scripts/vendor/backbone-min.js"></script>
-  <script src="scripts/App.js"></script>
- 
-+  <!-- Templates -->
-+  <script type="text/template" id="item-template">
-+    <div class="view">
-+      <label><%- title %></label>
-+    </div>
-+  </script>
-+
-   </body>
- </html>
-\ No newline at end of file
-```
-<div class = "diff-container">
-  <div class = "url-diff-container"></div>
-</div>
 
 ## Backbone.JS
 
@@ -158,30 +124,253 @@ Download links:
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>Backbone.js Todos</title>
-  <link rel="stylesheet" href="styles/styles.css"/>
-</head>
+  <head>
+    <title>Backbone.js Todos</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
 
-<body>
+  <body>
 
-  <div id="todoapp">
+    <div id="todoapp">
 
-    <header>
-      <h1>Todos</h1>
-      <input id="new-todo" type="text">
-    </header>
+      <header>
+        <h1>Todos</h1>
+        <input id="new-todo" type="text">
+      </header>
 
-  </div>
+      <section id="main">
+        <ul id="todo-list"></ul>
+      </section>
 
-  <!-- scripts -->
-  <script src="scripts/vendor/jquery-3.2.1.min.js"></script>
-  <script src="scripts/vendor/underscore-min.js"></script>
-  <script src="scripts/vendor/backbone-min.js"></script>
-  <script src="scripts/App.js"></script>
+    </div>
+
+    <!-- scripts -->
+    <script src="scripts/vendor/jquery-3.2.1.min.js"></script>
+    <script src="scripts/vendor/underscore-min.js"></script>
+    <script src="scripts/vendor/backbone-min.js"></script>
+    <script src="scripts/App.js"></script>
 
   </body>
+
 </html>
+```
+
+Don't read into the next file, just copy-paste it. Css files just add cosmetic-beauty to ugly pure html pages.
+
+=== `styles/styles.css` ===
+
+```css
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.4em;
+    background: #eeeeee;
+    color: #333333;
+    width: 520px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+#todoapp {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 40px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+    -ms-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+    -o-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    -ms-border-radius: 0 0 5px 5px;
+    -o-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+}
+
+#todoapp h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 0 10px 0;
+}
+
+#todoapp input[type="text"] {
+    width: 466px;
+    font-size: 24px;
+    font-family: inherit;
+    line-height: 1.4em;
+    border: 0;
+    outline: none;
+    padding: 6px;
+    border: 1px solid #999999;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+    -ms-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+    -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+}
+
+#todoapp input::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+#main {
+    display: none;
+}
+
+#todo-list {
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+}
+
+#todo-list li {
+    padding: 18px 20px 18px 0;
+    position: relative;
+    font-size: 24px;
+    border-bottom: 1px solid #cccccc;
+}
+
+#todo-list li:last-child {
+    border-bottom: none;
+}
+
+#todo-list li.done label {
+    color: #777777;
+    text-decoration: line-through;
+}
+
+#todo-list .destroy {
+    position: absolute;
+    right: 5px;
+    top: 20px;
+    display: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: url(destroy.png) no-repeat;
+}
+
+#todo-list li:hover .destroy {
+    display: block;
+}
+
+#todo-list .destroy:hover {
+    background-position: 0 -20px;
+}
+
+#todo-list li.editing {
+    border-bottom: none;
+    margin-top: -1px;
+    padding: 0;
+}
+
+#todo-list li.editing:last-child {
+    margin-bottom: -1px;
+}
+
+#todo-list li.editing .edit {
+    display: block;
+    width: 444px;
+    padding: 13px 15px 14px 20px;
+    margin: 0;
+}
+
+#todo-list li.editing .view {
+    display: none;
+}
+
+#todo-list li .view label {
+    word-break: break-word;
+}
+
+#todo-list li .edit {
+    display: none;
+}
+
+#todoapp footer {
+    display: none;
+    margin: 0 -20px -20px -20px;
+    overflow: hidden;
+    color: #555555;
+    background: #f4fce8;
+    border-top: 1px solid #ededed;
+    padding: 0 20px;
+    line-height: 37px;
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    -ms-border-radius: 0 0 5px 5px;
+    -o-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+}
+
+#clear-completed {
+    float: right;
+    line-height: 20px;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.1);
+    color: #555555;
+    font-size: 11px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 0 10px 1px;
+    cursor: pointer;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    border-radius: 12px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
+    -ms-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
+    -o-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0;
+}
+
+#clear-completed:hover {
+    background: rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0 0;
+    -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0 0;
+    -ms-box-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0 0;
+    -o-box-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0 0;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0 0;
+}
+
+#clear-completed:active {
+    position: relative;
+    top: 1px;
+}
+
+#todo-count span {
+    font-weight: bold;
+}
+
+#instructions {
+    margin: 10px auto;
+    color: #777777;
+    text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+    text-align: center;
+}
+
+#instructions a {
+    color: #336699;
+}
+
+#credits {
+    margin: 30px auto;
+    color: #999;
+    text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+    text-align: center;
+}
+
+#credits a {
+    color: #888;
+}
 ```
 
 Leave `App.js` empty for the moment.
@@ -207,19 +396,29 @@ We'll create a model for a TODO App (which is becoming the "Hello World" for dyn
 === `App.js` ===
 
 ```javascript
-// Our basic **Todo** model has a `title` attribute.
-var Todo = Backbone.Model.extend({
+// Load the application once the DOM is ready, using `jQuery.ready`:
+$(function() {
+  // Handler for .ready() called.
 
-  // Default attributes for the todo item.
-  defaults: function() {
-    return {
-      title: "empty todo...",
-    };
-  }
+  // Todo Model
+  // ----------
 
+  // Our basic **Todo** model has a `title` attribute.
+  var Todo = Backbone.Model.extend({
+
+    // Default attributes for the todo item.
+    defaults: function() {
+      return {
+        title: "empty todo...",
+      };
+    }
+
+  });
 });
 ```
 </div>
+
+Right now nothing is noticeable on the UI because model rests inside the code, we need a `view` to render the model.
 
 ### Views
 <div class="expandable-header"></div>
@@ -230,74 +429,105 @@ Models should be generally unaware of views. Instead, views listen to the model 
 
 ![Image of backbone Model-View interaction](/images/Backbone-JS/model-view-interaction.svg "Model-View interaction")
 
-Now we will add some html to support our `TodoView`.
+Now we will add some html to support our `TodoView`, and the `TodoView` itself.
 
-=== index.html ===
+```patch
+Subject: [PATCH] step-02: Create Todo View.
 
-```html
-<!DOCTYPE html>
-<html>
+---
+ index.html     |  9 +++++++++
+ scripts/App.js | 27 +++++++++++++++++++++++++++
+ 2 files changed, 36 insertions(+)
 
-<head>
-  <title>Backbone.js Todos</title>
-  <link rel="stylesheet" href="styles/styles.css"/>
-</head>
-
-<body>
-
-  <div id="todoapp">
-
-    <header>
-      <h1>Todos</h1>
-      <input id="new-todo" type="text">
-    </header>
-
-  </div>
-
-  <!-- scripts -->
-  <script src="scripts/vendor/jquery-3.2.1.min.js"></script>
-  <script src="scripts/vendor/underscore-min.js"></script>
-  <script src="scripts/vendor/backbone-min.js"></script>
-  <script src="scripts/App.js"></script>
-
-  <!-- Templates -->
-  <script type="text/template" id="item-template">
-    <div class="view">
-      <label><%- title %></label>
-    </div>
-  </script>
-
-  </body>
-</html>
+diff --git a/index.html b/index.html
+index 16529af..422d030 100644
+--- a/index.html
++++ b/index.html
+@@ -27,6 +27,15 @@
+     <script src="scripts/vendor/backbone-min.js"></script>
+     <script src="scripts/App.js"></script>
+ 
++    <!-- Templates -->
++    <script type="text/template" id="item-template">
++      <div class="view">
++        <label>
++          <%- title %>
++        </label>
++      </div>
++    </script>
++
+   </body>
+ 
+ </html>
+diff --git a/scripts/App.js b/scripts/App.js
+@@ -16,4 +16,31 @@ $(function() {
+```patch
+Subject: [PATCH] step-02: Create Todo View.
+---
+ index.html     |  9 +++++++++
+ scripts/App.js | 27 +++++++++++++++++++++++++++
+ 2 files changed, 36 insertions(+)
+diff --git a/index.html b/index.html
+index 16529af..422d030 100644
+--- a/index.html
++++ b/index.html
+@@ -27,6 +27,15 @@
+     <script src="scripts/vendor/backbone-min.js"></script>
+     <script src="scripts/App.js"></script>
+ 
++    <!-- Templates -->
++    <script type="text/template" id="item-template">
++      <div class="view">
++        <label>
++          <%- title %>
++        </label>
++      </div>
++    </script>
++
+   </body>
+ 
+ </html>
+diff --git a/scripts/App.js b/scripts/App.js
+index 48ebd21..7127d6c 100644
+--- a/scripts/App.js
++++ b/scripts/App.js
+@@ -16,4 +16,31 @@ $(function() {
+     }
+ 
+   });
++
++  // Todo Item View
++  // --------------
++
++  // The DOM element for a todo item...
++  var TodoView = Backbone.View.extend({
++
++    //... is a list tag.
++    tagName: "li",
++
++    // Cache the template function for a single item.
++    template: _.template($('#item-template').html()),
++
++    // The TodoView listens for changes to its model, re-rendering. Since there's
++    // a one-to-one correspondence between a **Todo** and a **TodoView** in this
++    // app, we set a direct reference on the model for convenience.
++    initialize: function() {
++      this.listenTo(this.model, 'change', this.render);
++    },
++
++    // Re-render the titles of the todo item.
++    render: function() {
++      this.$el.html(this.template(this.model.toJSON()));
++      return this;
++    }
++
++  });
+ });
 ```
+<div class = "diff-container">
+  <div class = "url-diff-container"></div>
+</div>
 
-=== App.js ===
-
-```javascript
-// The DOM element for a todo item...
-var TodoView = Backbone.View.extend({
-
-  //... is a list tag.
-  tagName:  "li",
-
-  // Cache the template function for a single item.
-  template: _.template($('#item-template').html()),
-
-  // The TodoView listens for changes to its model, re-rendering. Since there's
-  // a one-to-one correspondence between a **Todo** and a **TodoView** in this
-  // app, we set a direct reference on the model for convenience.
-  initialize: function() {
-    this.listenTo(this.model, 'change', this.render);
-  },
-
-  // Re-render the titles of the todo item.
-  render: function() {
-    this.$el.html(this.template(this.model.toJSON()));
-    return this;
-  }
-
-});
-```
 </div>
 
 ### Collections
@@ -358,45 +588,46 @@ DEL  /books/1 ... model.destroy();
 
 For the sake of <abbr title="concise and exact use of words in writing or speech.">brevity</abbr>, in our TodoApp we'll be using the non-RESTful approach.
 
-Now we need to add some behaviour to our Todo Model manually:
+Now we need to add our `Todo Colection`:
 
-```javascript
-var Todo = Backbone.Model.extend({
+```patch
+Subject: [PATCH] step-03: Create Todo Collection.
 
-  // Default attributes for the todo item.
-  defaults: function() {
-    return {
-      title: "empty todo...",
-      done: false
-    };
-  },
+---
+ scripts/App.js | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
 
-  // Toggle the done state of this todo item.
-  toggle: function() {
-    this.save({done: !this.get("done")});
-  }
-});
+diff --git a/scripts/App.js b/scripts/App.js
+index 7127d6c..f5705ea 100644
+--- a/scripts/App.js
++++ b/scripts/App.js
+@@ -17,6 +17,21 @@ $(function() {
+ 
+   });
+ 
++  // Todo Collection
++  // ---------------
++
++  // The collection of todos is backed by *Local Variable* instead of a *localStorage* or a remote
++  // server.
++  var TodoList = Backbone.Collection.extend({
++
++    // Reference to this collection's model.
++    model: Todo,
++
++  });
++
++  // Create our global collection of **Todos**.
++  var Todos = new TodoList;
++
+   // Todo Item View
+   // --------------
+ 
 ```
+<div class = "diff-container">
+  <div class = "url-diff-container"></div>
+</div>
 
-Now we will add some behaviour to our TodoList Collection:
-
-```javascript
-var TodoList = Backbone.Collection.extend({
-
-  // Reference to this collection’s model.
-  model: Todo,
-
-  // Filter down the list of all todo items that are finished.
-  done: function() {
-    return this.where({done: true});
-  },
-
-  // Filter down the list to only todo items that are still not finished.
-  remaining: function() {
-    return this.where({done: false});
-  },
-});
-```
 </div>
 
 ### Events
@@ -406,10 +637,283 @@ In Backbone you can bind events to any Object, when events `trigger` -> things h
 
 We bind the backbone event to an object with `on` (alias: `bind`), and un-bind with `off`.
 
-```javascript
+We will add the events in the `AppView` which is the top-level piece of UI.
 
+```patch
+Subject: [PATCH] step-04: Create App View.
+
+---
+ scripts/App.js | 62 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 62 insertions(+)
+
+diff --git a/scripts/App.js b/scripts/App.js
+index f5705ea..785d6e4 100644
+--- a/scripts/App.js
++++ b/scripts/App.js
+@@ -58,4 +58,66 @@ $(function() {
+     }
+ 
+   });
++
++  // The Application
++  // ---------------
++
++  // Our overall **AppView** is the top-level piece of UI.
++  var AppView = Backbone.View.extend({
++
++    // Instead of generating a new element, bind to the existing skeleton of
++    // the App already present in the HTML.
++    el: $("#todoapp"),
++
++    // Delegated events for creating new items.
++    events: {
++      "keypress #new-todo": "createOnEnter",
++    },
++
++    // At initialization we bind to the relevant events on the `Todos`
++    // collection, when items are added or changed.
++    initialize: function() {
++
++      this.input = this.$("#new-todo");
++
++      // whenever anything changes, re-render.
++      this.listenTo(Todos, 'all', this.render);
++
++      this.main = $('#main');
++    },
++
++    // Re-rendering the App just means refreshing the statistics -- the rest
++    // of the app doesn't change.
++    render: function() {
++      if (Todos.length) {
++        this.main.show();
++      } else {
++        this.main.hide();
++      }
++    },
++
++    // If you hit return in the main input field, create new **Todo** model,
++    // adding it to a *Local Variable* instead of persisting it to *localStorage*.
++    createOnEnter: function(e) {
++      if (e.keyCode != 13) return;
++
++      var todo = new Todo({
++        title: this.input.val()
++      });
++      Todos.add(todo);
++
++      var view = new TodoView({
++        model: todo
++      });
++      this.$("#todo-list").append(view.render().el);
++
++      // clear the input once the todo is added to our list.
++      this.input.val('');
++    }
++
++  });
++
++  // Finally, we kick things off by creating the **App**.
++  var App = new AppView;
++
+ });
 ```
+<div class = "diff-container">
+  <div class = "url-diff-container"></div>
 </div>
+
+At this point you can see that adding a `Todos` item acutally adds it to the `Todo List`.
+
+![Image of Create App-View](/images/Backbone-JS/create-appView.png "Create App-View")
+
+</div>
+
+### Add "done" functionality
+<div class="expandable-header"></div>
+<div class="expandable-content">
+Here we will develop the feature to mark a particular `Todo` as completed.
+Recall that we added a `styles.css` file initially. This file contains all the "cosmetics" of the Todo app. The strikethrough style is also present in the css file (search for "li.done" there without quotes). So we just need to use the `done` class to apply it.
+
+```patch
+Subject: [PATCH] step-05: Feature: add done.
+
+---
+ index.html     |  1 +
+ scripts/App.js | 19 ++++++++++++++++++-
+ 2 files changed, 19 insertions(+), 1 deletion(-)
+
+diff --git a/index.html b/index.html
+index 422d030..0ec3842 100644
+--- a/index.html
++++ b/index.html
+@@ -30,6 +30,7 @@
+     <!-- Templates -->
+     <script type="text/template" id="item-template">
+       <div class="view">
++        <input class="toggle" type="checkbox" <%=done ? 'checked="checked"' : '' %> />
+         <label>
+           <%- title %>
+         </label>
+diff --git a/scripts/App.js b/scripts/App.js
+index 785d6e4..57065aa 100644
+--- a/scripts/App.js
++++ b/scripts/App.js
+@@ -5,14 +5,20 @@ $(function() {
+   // Todo Model
+   // ----------
+ 
+-  // Our basic **Todo** model has a `title` attribute.
++  // Our basic **Todo** model has `title`, and `done` attributes.
+   var Todo = Backbone.Model.extend({
+ 
+     // Default attributes for the todo item.
+     defaults: function() {
+       return {
+         title: "empty todo...",
++        done: false
+       };
++    },
++
++    // Toggle the `done` state of this todo item.
++    toggle: function() {
++      this.set('done', !this.get("done"));
+     }
+     template: _.template($('#item-template').html()),
+ 
++    // The DOM events specific to an item.
++    events: {
++      "click .toggle": "toggleDone",
++    },
++
+     // The TodoView listens for changes to its model, re-rendering. Since there's
+     // a one-to-one correspondence between a **Todo** and a **TodoView** in this
+     // app, we set a direct reference on the model for convenience.
+@@ -54,7 +65,13 @@ $(function() {
+     // Re-render the titles of the todo item.
+     render: function() {
+       this.$el.html(this.template(this.model.toJSON()));
++      this.$el.toggleClass('done', this.model.get('done'));
+       return this;
++    },
++
++    // Toggle the `"done"` state of the model.
++    toggleDone: function() {
++      this.model.toggle();
+     }
+ 
+   });
+@@ -44,6 +50,11 @@ $(function() {
+     // Cache the template function for a single item.
+     template: _.template($('#item-template').html()),
+</div>
+ 
++    // The DOM events specific to an item.
++    events: {
++      "click .toggle": "toggleDone",
++    },
++
+     // The TodoView listens for changes to its model, re-rendering. Since there's
+     // a one-to-one correspondence between a **Todo** and a **TodoView** in this
+     // app, we set a direct reference on the model for convenience.
+@@ -54,7 +65,13 @@ $(function() {
+     // Re-render the titles of the todo item.
+     render: function() {
+       this.$el.html(this.template(this.model.toJSON()));
++      this.$el.toggleClass('done', this.model.get('done'));
+       return this;
++    },
++
++    // Toggle the `"done"` state of the model.
++    toggleDone: function() {
++      this.model.toggle();
+     }
+ 
+   });
+```
+<div class = "diff-container">
+  <div class = "url-diff-container"></div>
+</div>
+
+Now you can add a `Todo` as well as check it to mark it as `done`.
+
+![Image of Todo Done](/images/Backbone-JS/todo-done.png "Todo Done")
+
+     // adding it to a *Local Variable* instead of persisting it to *localStorage*.
+     createOnEnter: function(e) {
+       if (e.keyCode != 13) return;
++      if (!this.input.val()) return;
+ 
+       var todo = new Todo({
+         title: this.input.val()
+<div class = "diff-container">
+  <div class = "url-diff-container"></div>
+</div>
+
+### Fixed: Can add empty Todo
+diff --git a/scripts/App.js b/scripts/App.js
+index 48ebd21..7127d6c 100644
+Have you noticed that your Todo app is not perfect! It enables blank entries.
++++ b/scripts/App.js
+@@ -1,19 +1,46 @@
+ // Load the application once the DOM is ready, using `jQuery.ready`:
+ $(function() {
+   // Handler for .ready() called.
+ 
+![Image of Todo Empty](/images/Backbone-JS/todo-empty.png "Todo Empty")
+   // ----------
+ 
+So here we'll skip adding a Todo if it's empty.
+   var Todo = Backbone.Model.extend({
+ 
+```patch
+Subject: [PATCH] step-06: Fixed: can add empty Todo.
+
+---
+ scripts/App.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/scripts/App.js b/scripts/App.js
+index 57065aa..20e1126 100644
+--- a/scripts/App.js
++++ b/scripts/App.js
+@@ -117,6 +117,7 @@ $(function() {
+     // adding it to a *Local Variable* instead of persisting it to *localStorage*.
+     createOnEnter: function(e) {
+       if (e.keyCode != 13) return;
++      if (!this.input.val()) return;
+ 
+       var todo = new Todo({
+         title: this.input.val()
++    template: _.template($('#item-template').html()),
++
++    // The TodoView listens for changes to its model, re-rendering. Since there's
++    // a one-to-one correspondence between a **Todo** and a **TodoView** in this
++    // app, we set a direct reference on the model for convenience.
++    initialize: function() {
++      this.listenTo(this.model, 'change', this.render);
++    },
++
++    // Re-render the titles of the todo item.
++    render: function() {
++      this.$el.html(this.template(this.model.toJSON()));
++      return this;
++    }
++
++  });
+ });
+```
+<div class = "diff-container">
+  <div class = "url-diff-container"></div>
+</div>
+
+</div>
+
+Congratulations! you've just finished your `Todo Backbone App`.
+
+Here are some things you can explore yourself and are not covered in this blog post:
+
+- Add a persistent store instead of a temp variable to store your `Todos`. Right now if you close your browser, all your `todos` are gone!
+- Add mechanism to delete a `Todo` (Required if you've mistakenly added a `Todo` and wanted to delete it or you might want to clear a completed `Todo`.)
 
 - [ ] class ListView extends Backbone.**View**
 - [ ] el
@@ -429,7 +933,7 @@ We bind the backbone event to an object with `on` (alias: `bind`), and un-bind w
         success()
    ```
 
-[Reference: https://adamjspooner.github.io/coffeescript-meet-backbonejs/01/docs/script.html]
+[Reference: https://adamjspooner.github.io/coffeescript-meet-backbonejs/01/docs/script.html](https://adamjspooner.github.io/coffeescript-meet-backbonejs/01/docs/script.html)
 
 Visit [Official WebSite: http://backbonejs.org/](http://backbonejs.org/)
 

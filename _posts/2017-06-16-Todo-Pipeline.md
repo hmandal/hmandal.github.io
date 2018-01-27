@@ -74,3 +74,9 @@ Expand to see content.
 - [ ] [Js: `text()` to get text without html tags](https://stackoverflow.com/questions/19228839/why-i-cant-get-value-of-label-with-jquery-and-javascript)
 - [ ] [Jekyll: error:liquid looks for tags with \{\{](https://github.com/jekyll/jekyll/issues/5458)
 - [ ] [Unix: What is the exact difference between a 'terminal', a 'shell', a 'tty' and a 'console'?](https://unix.stackexchange.com/questions/4126/what-is-the-exact-difference-between-a-terminal-a-shell-a-tty-and-a-con/4132)
+- [ ] [Implement Statistics for Todo (Success, Failed, How many times used, etc)](https://gist.github.com/hmandal/de74eb101ea965dbbbce26326b496de2)
+- [ ] [Run Specflow from the Command Line](https://gist.github.com/hmandal/63bd944042645bcba4d2393173481222)
+- [ ] [Powershell Scripts in Bamboo: link #1](https://www.vexasoft.com/blogs/powershell/7255220-powershell-tutorial-try-catch-finally-and-error-handling-in-powershell) [, link #2](https://documentation.red-gate.com/display/DLMA1/Use+the+Bamboo+plugin)
+- [ ] Service Fabric: Notes: LoadBalancer knows only URLs.
+- [ ] [Speed Mathematics: Verify Multiplication](https://web.archive.org/web/20031010140429/http://hucellbiol.mdc-berlin.de:80/~mp01mg/oldweb/1mutrach.htm)
+- [ ] Git rebase vs. merge [link #1](https://medium.com/@porteneuve/getting-solid-at-git-rebase-vs-merge-4fa1a48c53aa), [link #2](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)

@@ -16,6 +16,7 @@
 .d2h-diff-table{
   border: none !important;
   padding: 0px !important;
+  background-color: white;
 }
 
 .diff-container{
@@ -39,6 +40,11 @@
 .expandable-content {
   display: none;
   padding-left : 25px;
+  padding-right : 25px;
+  background-image: linear-gradient(black 33%, rgba(255,255,255,0) 0%);
+  background-position: left;
+  background-size: 1px 10px;
+  background-repeat: repeat-y;
 }
 
 .expand-all{
