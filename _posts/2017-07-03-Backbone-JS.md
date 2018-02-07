@@ -433,36 +433,6 @@ Now we will add some html to support our `TodoView`, and the `TodoView` itself.
 
 ```patch
 Subject: [PATCH] step-02: Create Todo View.
-
----
- index.html     |  9 +++++++++
- scripts/App.js | 27 +++++++++++++++++++++++++++
- 2 files changed, 36 insertions(+)
-
-diff --git a/index.html b/index.html
-index 16529af..422d030 100644
---- a/index.html
-+++ b/index.html
-@@ -27,6 +27,15 @@
-     <script src="scripts/vendor/backbone-min.js"></script>
-     <script src="scripts/App.js"></script>
- 
-+    <!-- Templates -->
-+    <script type="text/template" id="item-template">
-+      <div class="view">
-+        <label>
-+          <%- title %>
-+        </label>
-+      </div>
-+    </script>
-+
-   </body>
- 
- </html>
-diff --git a/scripts/App.js b/scripts/App.js
-@@ -16,4 +16,31 @@ $(function() {
-```patch
-Subject: [PATCH] step-02: Create Todo View.
 ---
  index.html     |  9 +++++++++
  scripts/App.js | 27 +++++++++++++++++++++++++++
