@@ -461,7 +461,7 @@ diff --git a/scripts/App.js b/scripts/App.js
 index 48ebd21..7127d6c 100644
 --- a/scripts/App.js
 +++ b/scripts/App.js
-@@ -16,4 +16,31 @@ $(function() {
+@@ -16,4 +16,31 @@ 
      }
  
    });
