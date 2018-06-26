@@ -80,3 +80,15 @@ Expand to see content.
 - [ ] Service Fabric: Notes: LoadBalancer knows only URLs.
 - [ ] [Speed Mathematics: Verify Multiplication](https://web.archive.org/web/20031010140429/http://hucellbiol.mdc-berlin.de:80/~mp01mg/oldweb/1mutrach.htm)
 - [ ] Git rebase vs. merge [link #1](https://medium.com/@porteneuve/getting-solid-at-git-rebase-vs-merge-4fa1a48c53aa), [link #2](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+- [ ] [Avoiding Common Backbone.js Pitfalls](http://ozkatz.github.io/avoiding-common-backbonejs-pitfalls.html), [, Backbone.js Tips](https://developers.supportbee.com/blog/backbone-js-tips-lessons-from-the-trenches/)
+- [ ] [js: types of equality comparison](https://github.com/tc39/Array.prototype.includes/blob/master/README.md)
+- [ ] [Unix sort command](https://shapeshed.com/unix-sort/)
+- [ ] VS Service Fabric: Play Deployment Sound. [PS: Sound](http://scriptolog.blogspot.in/2007/09/playing-sounds-in-powershell.html), PS Script Path: C:\Program Files\Microsoft SDKs\Service Fabric\Tools\PSModule\ServiceFabricSDK\Get-ServiceFabricApplicationStatus.ps1
+- [ ] [C#: KnownType attribute](https://stackoverflow.com/questions/6266403/knowntype-for-all-derived-types-of-an-abstract-class?rq=1)
+- [ ] [Js: Check for undefined nested property](https://stackoverflow.com/questions/2631001/javascript-test-for-existence-of-nested-object-key), [, null coalescing operator in JavaScript](https://stackoverflow.com/questions/476436/is-there-a-null-coalescing-operator-in-javascript)
+- [ ] [Static variables in JavaScript](https://stackoverflow.com/questions/1535631/static-variables-in-javascript) [, this](https://stackoverflow.com/questions/7307243/how-to-declare-a-static-variable-in-javascript)
+- [ ] [.NET MVC Routing doc](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/routing)
+- [ ] [c# @ in variable name](https://stackoverflow.com/questions/429529/what-does-the-symbol-before-a-variable-name-mean-in-c)
+- [ ] [c# Task.WhenAll()](https://dotnet.github.io/orleans/Tutorials/Interaction-with-Libraries-and-Services.html#parallelization)
+- [ ] [c# UnitTest: TestMethod vs. DataTestMethod](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-mstest)
+- [ ] c# UnitTest: DataRow, Moq, IGrainFactory
