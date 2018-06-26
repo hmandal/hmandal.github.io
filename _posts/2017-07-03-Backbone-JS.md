@@ -60,7 +60,7 @@ $("ul").append(list);
 </div>
 
 It's good to know this but don't use it.
-- [ ] Why is this BAD?
+<!-- HMTODO: - [ ] Why is this BAD? -->
 
 We've a better way to store the data- In JS Objects! You can do it yourself or use Backbone which is already using it. Here's a quick glance at MVC Coding Pattern:
 <div class="expandable-header"></div>
@@ -120,7 +120,10 @@ Download links:
 
 === `index.html` ===
 
+<div class="expandable-header"></div>
+<div class="expandable-content">
 ```html
+<code>
 <!DOCTYPE html>
 <html>
 
@@ -153,12 +156,16 @@ Download links:
   </body>
 
 </html>
+</code>
 ```
+</div>
 
 Don't read into the next file, just copy-paste it. Css files just add cosmetic-beauty to ugly pure html pages.
 
 === `styles/styles.css` ===
 
+<div class="expandable-header"></div>
+<div class="expandable-content">
 ```css
 html,
 body {
@@ -372,6 +379,7 @@ body {
     color: #888;
 }
 ```
+</div>
 
 Leave `App.js` empty for the moment.
 
@@ -433,36 +441,6 @@ Now we will add some html to support our `TodoView`, and the `TodoView` itself.
 
 ```patch
 Subject: [PATCH] step-02: Create Todo View.
-
----
- index.html     |  9 +++++++++
- scripts/App.js | 27 +++++++++++++++++++++++++++
- 2 files changed, 36 insertions(+)
-
-diff --git a/index.html b/index.html
-index 16529af..422d030 100644
---- a/index.html
-+++ b/index.html
-@@ -27,6 +27,15 @@
-     <script src="scripts/vendor/backbone-min.js"></script>
-     <script src="scripts/App.js"></script>
- 
-+    <!-- Templates -->
-+    <script type="text/template" id="item-template">
-+      <div class="view">
-+        <label>
-+          <%- title %>
-+        </label>
-+      </div>
-+    </script>
-+
-   </body>
- 
- </html>
-diff --git a/scripts/App.js b/scripts/App.js
-@@ -16,4 +16,31 @@ $(function() {
-```patch
-Subject: [PATCH] step-02: Create Todo View.
 ---
  index.html     |  9 +++++++++
  scripts/App.js | 27 +++++++++++++++++++++++++++
@@ -491,7 +469,7 @@ diff --git a/scripts/App.js b/scripts/App.js
 index 48ebd21..7127d6c 100644
 --- a/scripts/App.js
 +++ b/scripts/App.js
-@@ -16,4 +16,31 @@ $(function() {
+@@ -16,4 +16,31 @@ 
      }
  
    });
@@ -601,7 +579,7 @@ diff --git a/scripts/App.js b/scripts/App.js
 index 7127d6c..f5705ea 100644
 --- a/scripts/App.js
 +++ b/scripts/App.js
-@@ -17,6 +17,21 @@ $(function() {
+@@ -17,6 +17,21 @@
  
    });
  
@@ -650,7 +628,7 @@ diff --git a/scripts/App.js b/scripts/App.js
 index f5705ea..785d6e4 100644
 --- a/scripts/App.js
 +++ b/scripts/App.js
-@@ -58,4 +58,66 @@ $(function() {
+@@ -58,4 +58,66 @@
      }
  
    });
@@ -758,7 +736,7 @@ diff --git a/scripts/App.js b/scripts/App.js
 index 785d6e4..57065aa 100644
 --- a/scripts/App.js
 +++ b/scripts/App.js
-@@ -5,14 +5,20 @@ $(function() {
+@@ -5,14 +5,20 @@
    // Todo Model
    // ----------
  
@@ -788,7 +766,7 @@ index 785d6e4..57065aa 100644
      // The TodoView listens for changes to its model, re-rendering. Since there's
      // a one-to-one correspondence between a **Todo** and a **TodoView** in this
      // app, we set a direct reference on the model for convenience.
-@@ -54,7 +65,13 @@ $(function() {
+@@ -54,7 +65,13 @@
      // Re-render the titles of the todo item.
      render: function() {
        this.$el.html(this.template(this.model.toJSON()));
@@ -802,7 +780,7 @@ index 785d6e4..57065aa 100644
      }
  
    });
-@@ -44,6 +50,11 @@ $(function() {
+@@ -44,6 +50,11 @@
      // Cache the template function for a single item.
      template: _.template($('#item-template').html()),
 </div>
@@ -815,7 +793,7 @@ index 785d6e4..57065aa 100644
      // The TodoView listens for changes to its model, re-rendering. Since there's
      // a one-to-one correspondence between a **Todo** and a **TodoView** in this
      // app, we set a direct reference on the model for convenience.
-@@ -54,7 +65,13 @@ $(function() {
+@@ -54,7 +65,13 @@
      // Re-render the titles of the todo item.
      render: function() {
        this.$el.html(this.template(this.model.toJSON()));
@@ -838,32 +816,13 @@ Now you can add a `Todo` as well as check it to mark it as `done`.
 
 ![Image of Todo Done](/images/Backbone-JS/todo-done.png "Todo Done")
 
-     // adding it to a *Local Variable* instead of persisting it to *localStorage*.
-     createOnEnter: function(e) {
-       if (e.keyCode != 13) return;
-+      if (!this.input.val()) return;
- 
-       var todo = new Todo({
-         title: this.input.val()
-<div class = "diff-container">
-  <div class = "url-diff-container"></div>
-</div>
-
 ### Fixed: Can add empty Todo
-diff --git a/scripts/App.js b/scripts/App.js
-index 48ebd21..7127d6c 100644
+
 Have you noticed that your Todo app is not perfect! It enables blank entries.
-+++ b/scripts/App.js
-@@ -1,19 +1,46 @@
- // Load the application once the DOM is ready, using `jQuery.ready`:
- $(function() {
-   // Handler for .ready() called.
  
 ![Image of Todo Empty](/images/Backbone-JS/todo-empty.png "Todo Empty")
-   // ----------
  
 So here we'll skip adding a Todo if it's empty.
-   var Todo = Backbone.Model.extend({
  
 ```patch
 Subject: [PATCH] step-06: Fixed: can add empty Todo.
@@ -876,7 +835,7 @@ diff --git a/scripts/App.js b/scripts/App.js
 index 57065aa..20e1126 100644
 --- a/scripts/App.js
 +++ b/scripts/App.js
-@@ -117,6 +117,7 @@ $(function() {
+@@ -117,6 +117,7 @@
      // adding it to a *Local Variable* instead of persisting it to *localStorage*.
      createOnEnter: function(e) {
        if (e.keyCode != 13) return;
@@ -908,30 +867,12 @@ index 57065aa..20e1126 100644
 
 </div>
 
-Congratulations! you've just finished your `Todo Backbone App`.
+### Congratulations! you've just finished your `Todo Backbone App`.
 
 Here are some things you can explore yourself and are not covered in this blog post:
 
 - Add a persistent store instead of a temp variable to store your `Todos`. Right now if you close your browser, all your `todos` are gone!
 - Add mechanism to delete a `Todo` (Required if you've mistakenly added a `Todo` and wanted to delete it or you might want to clear a completed `Todo`.)
-
-- [ ] class ListView extends Backbone.**View**
-- [ ] el
-- [ ] initialize: ->
-- [ ] render: ->
-- [ ] events: 'click button': 'addItem'
-- [ ] class Item extends Backbone.**Model**
-- [ ] @collection.**bind** 'add', @appendItem
-- [ ] item.**set** part2: "#{item.**get** 'part2'} #{@counter}"
-- [ ] class Item extends Backbone.**Model**
-- [ ] **tagName**: 'li'
-- [ ] Returning @ is considered a good practice. It let's us chain method calls (i.e., `item_view.render().el)`.
-- [ ] @model.destroy()
-- [ ] override Backbone.sync: 
-    ```
-    Backbone.sync = (method, model, success, error) ->
-        success()
-   ```
 
 [Reference: https://adamjspooner.github.io/coffeescript-meet-backbonejs/01/docs/script.html](https://adamjspooner.github.io/coffeescript-meet-backbonejs/01/docs/script.html)
 
